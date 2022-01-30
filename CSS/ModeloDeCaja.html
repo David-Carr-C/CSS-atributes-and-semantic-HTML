@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /*Contenido*/
+            width: 200px;
+            height: 200px;
+            background: plum;
+            /*Padding*/
+            padding: 20px;
+            box-sizing: border-box; /*Esto hace que no se sume el height y width al padding, sino que compartan*/
+            /*Border*/
+            border: 1px solid hotpink; /*El "box-sizing: border-box;" hace que respete si o si el height y el width que le fue especificado a la caja, asi que no habra cambios solo compartiran tamaño*/
+            /*Margin*/
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>Platzi</div> <!--Los margenes en vertical se sobreponen-->
+    <div>Es lo mejor</div>
+</body>
+</html>

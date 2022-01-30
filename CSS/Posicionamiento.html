@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Relative*/
+        .container {
+            width: 400px;
+            height: 400px;
+            background: peachpuff;
+            position: relative; /*Da la propiedad para tener "position: absolute";*/
+            right: 0;
+            top: 20px;
+        }
+        /*Cuando usamos un absolute, este elemento se va a mover con respecto al elemento relative más cercano*/
+        /*Absolute*/
+        .item {
+            width: 40px;
+            height: 40px;
+            background: hotpink;
+            position: absolute; /*El espacio que tiene es el de la caja padre*/
+            right: 0;
+        }
+
+        /*Fixed*/
+        nav {
+            width: 100%;
+            height: 60px;
+            background: lightcyan;
+            position: fixed; /*Se queda siempre en una posicion a pesar del scroll*/
+            top: 0;
+        }
+
+        /*Sticky*/
+        ul p {
+            position: sticky; /*Necesita hermanos para funcionar*/
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+    <nav></nav> <!--Nav tiene que ir arriba, pues el orden de las etiquetas va conforme a como se ve en la pagina, pero por demostracion de codigo de css lo pongo aqui-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend vel neque sed ullamcorper. Suspendisse potenti. Mauris sagittis sapien sem, vel tristique orci tempor eu. Donec at nunc eget sapien tincidunt condimentum vel nec nisl. In vel felis justo. Phasellus et arcu euismod, semper magna eu, gravida ante. Cras quis ex magna. Cras et elementum dolor, vel mollis lorem.
+
+        Aenean tincidunt, mauris vel porttitor lobortis, justo est dictum risus, sit amet volutpat mi nulla id erat. Quisque laoreet aliquet quam at sollicitudin. Integer at sem viverra, ultrices dui nec, pulvinar risus. Sed id rhoncus dolor. Cras tempus, enim sit amet accumsan ultrices, enim sapien gravida metus, in elementum purus dolor sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla hendrerit dignissim iaculis. Aenean tincidunt maximus maximus. Cras tempus ultricies ipsum eget auctor. Sed porta neque leo, et dignissim sem vehicula sed. Maecenas porta, orci quis sagittis faucibus, ex ex faucibus mauris, nec blandit est diam eu lorem. Sed blandit fermentum felis. Duis ut lobortis lacus.
+
+        Nunc semper finibus elementum. Nulla fermentum nulla mauris, vitae elementum turpis pellentesque at. Proin dolor velit, porta vitae odio scelerisque, fermentum ultricies libero. Aenean a risus elementum, aliquam augue quis, varius orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam viverra at sapien id elementum. Fusce dolor ipsum, tincidunt a mollis non, molestie quis lorem.
+
+        Duis ullamcorper ac risus sit amet efficitur. Fusce pretium sem congue, consectetur est vel, viverra mi. Fusce eu orci nec ligula vehicula tincidunt. Fusce eu mi aliquam, iaculis elit sed, condimentum turpis. Duis id sagittis tortor. Donec interdum tortor at nisi venenatis, in semper risus varius. Pellentesque quis magna nec massa laoreet ultricies. Maecenas vehicula eros et nisi sodales tristique semper vitae lorem. Vestibulum a nibh eget odio rhoncus vulputate et id lectus.
+
+        Sed consectetur fringilla pretium. Nunc mauris eros, gravida sit amet massa quis, faucibus facilisis turpis. Mauris vulputate ac leo vitae ullamcorper. In elit turpis, bibendum quis nisl vel, cursus volutpat odio. Nunc a pretium metus. Fusce dictum libero faucibus, tempor mi at, pulvinar nisi. Vivamus sed odio accumsan, iaculis tortor non, vehicula orci. Aenean at ante feugiat, tristique enim ut, lacinia arcu. Nam eu lacus elit. Suspendisse luctus ultricies nisl vitae finibus. Nam sagittis ornare mauris vitae pellentesque.
+        enean tincidunt, mauris vel porttitor lobortis, justo est dictum risus, sit amet volutpat mi nulla id erat. Quisque laoreet aliquet quam at sollicitudin. Integer at sem viverra, ultrices dui nec, pulvinar risus. Sed id rhoncus dolor. Cras tempus, enim sit amet accumsan ultrices, enim sapien gravida metus, in elementum purus dolor sed neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla hendrerit dignissim iaculis. Aenean tincidunt maximus maximus. Cras tempus ultricies ipsum eget auctor. Sed porta neque leo, et dignissim sem vehicula sed. Maecenas porta, orci quis sagittis faucibus, ex ex faucibus mauris, nec blandit est diam eu lorem. Sed blandit fermentum felis. Duis ut lobortis lacus.
+
+        Nunc semper finibus elementum. Nulla fermentum nulla mauris, vitae elementum turpis pellentesque at. Proin dolor velit, porta vitae odio scelerisque, fermentum ultricies libero. Aenean a risus elementum, aliquam augue quis, varius orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam viverra at sapien id elementum. Fusce dolor ipsum, tincidunt a mollis non, molestie quis lorem.
+
+        Duis ullamcorper ac risus sit amet efficitur. Fusce pretium sem congue, consectetur est vel, viverra mi. Fusce eu orci nec ligula vehicula tincidunt. Fusce eu mi aliquam, iaculis elit sed, condimentum turpis. Duis id sagittis tortor. Donec interdum tortor at nisi venenatis, in semper risus varius. Pellentesque quis magna nec massa laoreet ultricies. Maecenas vehicula eros et nisi sodales tristique semper vitae lorem. Vestibulum a nibh eget odio rhoncus vulputate et id lectus.
+    </p>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+
+    <ul>
+        <p>Fruits</p>
+        <li>Apple</li>
+        <li>Pear</li>
+        <li>Watermelon</li>
+    </ul>
+</body>
+</html>

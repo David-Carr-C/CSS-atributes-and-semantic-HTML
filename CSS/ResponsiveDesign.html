@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background: purple;
+        }
+        /*Media Queries*/
+        @media (max-width: 301px) { /*min : Desde*/ /*max : Hasta*/
+            div {
+            background: black;
+            }
+        }
+
+
+        /*Como es utilizado el Media Query:*/
+        div {
+            background: red;
+        }
+        @media (min-width: 301px) { /*Esto hace que red este disponible para pantallas menores a 301px*/
+            div {
+                background: black; /*Mientras que black esta disponible cuando se sobrepasa el 301px*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Platzi
+    </div>
+</body>
+</html>

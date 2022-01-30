@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*No juntar flexbox con position*/
+        /*Font*/
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 100%;
+        }
+
+        /*Lo demas*/
+        section {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            justify-content: center;
+        }
+        .card {
+            width: 500px;
+            height: 500px;
+            /*background: papayawhip;*/ /*este solo era un atributo para identificar donde estaba el cuadro, ahora no nos sirve porque en el borde constrasta mal*/
+            border-radius: 5%;
+            overflow: hidden;
+            position: relative;
+        }
+        .card img {
+            width: 100%;
+        }
+        section .inFront {
+            height: 25%;
+            width: 25%;
+            background: #0b151291;
+            position: absolute;
+            margin-top: 25px; /*Para menearlo en la pagina*/
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        div p {
+            color: aliceblue;
+            position: relative;
+            margin-left: 45px;/*Es para centrarlo o alinearlo*/
+
+            margin-top: 0%; /*Espaciado entre los parrafos*/
+            margin-bottom: 4%;
+        }
+        .container {
+            position: relative;
+            margin-bottom: 5%;
+        }
+        body{
+            background: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/1314550/pexels-photo-1314550.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Cat">
+            
+        </div>
+        <div class="inFront"> <!--Este contenedor permite manipular donde estaran los datos y poderlos superponer con el zindex-->
+            <div class="container">
+                <p>David Carrillo Castillo</p>
+                <p>Java Backend Developer</p>
+                <p>Student at Platzi</p>
+            </div> <!--Se necesita otro contenedor para poderlo mover hacia arriba-->
+                
+        </div>
+    </section>
+
+    <a href="https://cssreference.io/">CSS-Properties</a>
+</body>
+</html>

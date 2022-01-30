@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*El body por defecto tiene un margen*/
+        body {
+            margin: 0;
+        }
+        div {
+            background: salmon;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+        a { /*Elemento Inline*/
+            background: skyblue;
+            /*width: 200px; X
+            height: 200px; X -> los elementos que son en linea no tienen validez con estas propiedades*/
+            margin: 20px; /*No tiene margen de arriba y abajo, solo de los lados*/
+
+        }
+        button{
+            background: slateblue;
+            width: 200px;
+            height: 200px;
+            margin: 20px; /*Es como inline pero se le pueden poner y manipular las caracteristicas de tipo bloque*/
+        }
+        /*Para modificar de block a inline se pone "display: inline"*/
+    </style>
+</head>
+<body>
+    <div>Bloque</div>
+    <a href="https://htmlreference.io/">Inline, block, inline-block etc.</a>
+    <button>Inline-Block</button>
+</body>
+</html>

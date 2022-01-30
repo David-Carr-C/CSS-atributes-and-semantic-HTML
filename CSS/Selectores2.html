@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Selectores Combinadores*/
+        div p {
+            color: lime;
+        }
+        div > div {
+            background: plum;
+        }
+        .es {
+            background: red;
+        }
+        div + section { /*Se tienen que quitar los dos parrafos, pues esto indica que es div y subsecuentemente section*/
+            background: palevioletred;
+        }
+        div ~ p {
+            color: powderblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+        <p>Platzi</p>
+        <div class="es">Es</div>
+        </div>
+    </div>
+    <p>Class</p>
+    <p>Class</p>
+    <section>Es lo mejor</section> <!--Si quitamos los dos parrafos de arriba el "div + section" es valido-->
+    <div>
+        Master
+    </div>
+    
+</body>
+</html>

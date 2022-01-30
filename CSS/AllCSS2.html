@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*No juntar flexbox con position*/
+        section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .card {
+            width: 500px;
+            height: 500px;
+            background: papayawhip;
+            border-radius: 20px;
+            overflow: hidden;
+
+            position: absolute;
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+        }
+        .inFront{
+            text-align: center;
+            position: absolute;
+        }
+
+        .inFront :nth-child(2) {
+            color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/109629/pexels-photo-109629.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Germany">
+            
+        </div>
+        <div class="inFront"> 
+            <p>Germany</p>
+            <p>It's so beautiful</p>
+        </div> <!--We need a div to put in front this p-->
+    </section>
+</body>
+</html>
